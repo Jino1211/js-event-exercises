@@ -1,0 +1,17 @@
+.div ul {
+  list-style: none;
+  padding-left: 1%;
+  display: none;
+}
+.div .spannav {
+  cursor: pointer;
+}
+.div .spannav::before {
+  content: "▶";
+}
+.div.open .spannav::before {
+  content: "▼";
+}
+.div.open ul {
+  display: block;
+}

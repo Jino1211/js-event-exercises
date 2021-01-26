@@ -6,8 +6,8 @@ let counter = 0;
 
 console.log(href);
 contents.addEventListener('click', (e) => {
-    for (let i of a) {
-        href[counter] = i.getAttribute('href');
+    for (let link of a) {
+        href[counter] = link.getAttribute('href');
         counter++;
         }
         mose(href);

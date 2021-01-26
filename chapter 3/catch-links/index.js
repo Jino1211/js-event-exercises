@@ -1,17 +1,20 @@
+const contents = document.querySelector('#contents');
 const a = document.querySelectorAll('a');
-let a0 = a[0];
-console.log(a[0]);
+let href = [];
+let counter = 0;
 
-a0.addEventListener('click', () => {
-    (mose(href));
-    let href = this.getAttribute('href');
-    
 
-    function mose (href) {
-        let check = confirm('are you sure?');
-        console.log('hi');
-        if(!check) {
-        return false;
+console.log(href);
+contents.addEventListener('click', (e) => {
+    for (let i of a) {
+        href[counter] = i.getAttribute('href');
+        counter++;
         }
-    }
-})
+        mose(href);
+        function mose (href) {
+            let check = confirm('are you sure?');
+            if (!check) {
+                e.preventDefault();
+            }
+        }
+    })
